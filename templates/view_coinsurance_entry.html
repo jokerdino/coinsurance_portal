@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+{% block content %}
+
+<h1 class="title">Enter coinsurance confirmation details</h1>
+    <table class="table is-fullwidth">
+        <tr>
+            <tr><th>Download statement</th>    <td> <a href='{{ url_for("download_statement", coinsurance_id = coinsurance.id ) }}'> Download statement</a></td></tr>
+       <tr><th>Download confirmation</th>    <td><a href='{{ url_for("download_confirmation", coinsurance_id = coinsurance.id ) }}'> Download confirmation</a></td></tr>
+
+    </table>
+    <div class="field is-grouped">
+        <button class="button is-primary is-big">Save</button>
+    </div>
+
+{% endblock content %}
